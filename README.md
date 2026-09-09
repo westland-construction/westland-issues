@@ -6,34 +6,21 @@ Code lives in other repos (`westland-mcps`, `construction-skills`, etc.). This r
 
 ## How to report
 
-Most people report from Claude via the Westland bug-report skill / MCP (no GitHub account required). A bot opens the issue and the chat gets the issue URL back.
+Most people report from Claude via the Westland bug-report skill / MCP. You’ll get a link to the issue in chat.
 
-You can also open an issue here in the GitHub UI if you have a GitHub account.
+You can also open an issue here directly if you prefer.
 
-## Labels (type)
+## Labels
 
-Every issue should get **one type label**:
+Pick a type when filing:
 
 | Label | Use for |
 |---|---|
-| `bug` | Something broken / wrong output / error |
-| `feat` | Feature request / capability gap |
-| `friction` | Confusing UX, missing docs, awkward flow |
-| `docs` | Documentation-only fix |
-| optional severity | `severity:low` · `severity:medium` · `severity:high` · `severity:critical` |
+| `bug` | Something broken or wrong |
+| `feat` | Feature / capability gap |
+| `friction` | Confusing UX or awkward flow |
+| `docs` | Documentation-only |
 
-## Body conventions
+Severity labels (`severity:low` … `severity:critical`) are optional.
 
-Bot-filed issues include:
-
-```text
-Reporter: <local-part>
-```
-
-(local-part of `@westlandconstruction.com` only — public repo.)
-
-**Do not** put proprietary customer data, pricing, or unnecessary PII in titles or bodies.
-
-## Status
-
-MCP + skill rewrite and Supabase migration are tracked in the design issue on this repo.
+Thanks for helping improve the Westland tooling.
