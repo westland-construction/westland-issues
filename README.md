@@ -6,9 +6,10 @@ Code lives in other repos (`westland-mcps`, `construction-skills`, etc.). This r
 
 ## How to report
 
-Most people report from Claude via the Westland bug-report skill / MCP. You’ll get a link to the issue in chat.
+You can create an issue in either of these ways:
 
-You can also open an issue here directly if you prefer.
+1. **Westland Connector in Claude** — use the Westland bug-report skill / MCP from a Claude session. You’ll get a link to the issue in chat.
+2. **GitHub directly** — create a GitHub account (if you don’t have one) and [open an issue](https://github.com/westland-construction/westland-issues/issues/new) here.
 
 ## Labels
 
