@@ -4,6 +4,8 @@ Public **issues-only** tracker for Westland Construction skills, MCP tools, and 
 
 Code lives in other repos (`westland-mcps`, `construction-skills`, etc.). This repo is the shared backlog so reports are visible, linkable, and easy to triage.
 
+**This repository is public.** Anyone on the internet can read issues. When you file through the Westland Connector in Claude, Claude sanitizes the report. If you open an issue yourself, please do the same — leave out customer names, pricing, and anything else that shouldn’t be public.
+
 ## How to report
 
 You can create an issue in either of these ways:
