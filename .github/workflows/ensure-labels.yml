@@ -1,0 +1,39 @@
+name: Ensure issue labels
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/ensure-labels.yml
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create missing labels
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          ensure() {
+            local name="$1" color="$2" desc="$3"
+            if gh label list --repo "${GITHUB_REPOSITORY}" --json name --jq '.[].name' | grep -Fxq "$name"; then
+              echo "exists: $name"
+            else
+              gh label create "$name" --repo "${GITHUB_REPOSITORY}" --color "$color" --description "$desc"
+              echo "created: $name"
+            fi
+          }
+          ensure bug d73a4a "Something isn't working"
+          ensure feat 0E8A16 "Feature request"
+          ensure friction D93F0B "Friction or rough edge in a skill, tool, or workflow"
+          ensure docs 0075CA "Documentation gap or correction"
+          ensure severity:low 0E8A16 "Low severity"
+          ensure severity:medium FBCA04 "Medium severity"
+          ensure severity:high D93F0B "High severity"
+          ensure severity:critical B60205 "Critical severity"
